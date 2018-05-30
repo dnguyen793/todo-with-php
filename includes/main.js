@@ -70,7 +70,7 @@ function renderAllTasks(tasksArray){
 // output: none
 function getTaskDataAndRender(){
     $.ajax({
-        url: 'dummyData/readData.json',
+        url: 'server/php/getTasks.php',
         dataType: 'json',
         method: 'get',
         success: function(response){
