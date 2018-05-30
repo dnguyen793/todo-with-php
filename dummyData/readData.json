@@ -2,7 +2,7 @@
 	"tasks": [{
 		"title": "buy eggs",
 		"description": "Buy a dozen eggs from the store",
-		"dueDate": "5-1-2018 5:00pm",
+		"dueDate": "5-28-2018 5:00pm",
 		"completed": false
 	}, {
 		"title": "rotate tires",
