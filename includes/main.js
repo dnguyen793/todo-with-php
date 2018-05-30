@@ -95,7 +95,19 @@ function renderAllTasks(tasksArray){
 // input: none
 // output: none
 function getTaskDataAndRender(){
-    renderAllTasks(data.tasks);
+    $.ajax({
+        url: 'dummyData/readData.json',
+        dataType: 'json',
+        method: 'get',
+        success: function(response){
+            if(response.tasks.length>0){
+                renderAllTasks(response.tasks);
+            }
+            else{
+                console.log('something happened');
+            }
+        }
+    });
 
 }
 
