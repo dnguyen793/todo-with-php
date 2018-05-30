@@ -1,3 +1,28 @@
+var data = {
+	"tasks": [{
+		"title": "buy eggs",
+		"description": "Buy a dozen eggs from the store",
+		"dueDate": "5-28-2018 5:00pm",
+		"completed": false
+	}, {
+		"title": "rotate tires",
+		"description": "move the tires around your car, yo",
+		"dueDate": "6-1-2018 5:00pm",
+		"completed": false
+	}, {
+		"title": "change oil",
+		"description": "change the oil on the pinto",
+		"dueDate": "6-3-2018 5:00pm",
+		"completed": false
+	}],
+	"user": {
+		"id": 4,
+		"firstname": "Dan",
+		"lastname": "Paschal",
+		"avatar": "images/bunny.png"
+	}
+};
+
 
 $(document).ready(initializeApp);
 
@@ -70,19 +95,7 @@ function renderAllTasks(tasksArray){
 // input: none
 // output: none
 function getTaskDataAndRender(){
-    $.ajax({
-        url: 'dummyData/readData.json',
-        dataType: 'json',
-        method: 'get',
-        success: function(response){
-            if(response.tasks.length>0){
-                renderAllTasks(response.tasks);
-            }
-            else{
-                console.log('something happened');
-            }
-        }
-    });
+    renderAllTasks(data.tasks);
 
 }
 
